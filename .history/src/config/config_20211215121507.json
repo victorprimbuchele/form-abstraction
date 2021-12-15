@@ -5,7 +5,8 @@
             "initialValues": {
                 "nome": "",
                 "email": "",
-                "telefone": ""
+                "telefone": "",
+                "tamanho do piru": ""
             }
         }
     }

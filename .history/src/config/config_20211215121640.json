@@ -5,8 +5,7 @@
             "initialValues": {
                 "nome": "",
                 "email": "",
-                "telefone": ""
-            }
+                "telefone": ""            }
         }
     }
 ]
