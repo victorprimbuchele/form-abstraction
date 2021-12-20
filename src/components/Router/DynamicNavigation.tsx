@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import config from '../../config/config.json'
 import proccessArray from './processArryay'
 
@@ -52,19 +52,23 @@ const DynamicNavigation: React.FC = () => {
             {isLoading ? (
                 <h2>Tá carregando, jovi</h2>
             ) : (
-                Object.values(routerData).map((value: any) => {
-                    console.log(value.caminho)
-                    console.log(value.nome)
-                    return (
-                        <Routes>
-                            <Route
-                                key={value.caminho}
-                                path={value.caminho}
-                                element={value.nome}
-                            />
-                        </Routes>
-                    )
-                })
+                <BrowserRouter>
+                    <Routes>
+                        {Object.values(routerData).map(
+                            (value: any, index: number) => {
+                                console.log(value.caminho)
+                                console.log(value.nome)
+                                return (
+                                    <Route
+                                        key={index}
+                                        path={value.caminho}
+                                        element={value.nome}
+                                    />
+                                )
+                            }
+                        )}
+                    </Routes>
+                </BrowserRouter>
             )}
         </div>
     )
