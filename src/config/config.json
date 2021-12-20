@@ -5,9 +5,24 @@
             "initialValues": {
                 "nome": "",
                 "email": "",
-                "telefone": "",
-                "tamanho do piru": ""
+                "telefone": ""
             }
-        }
+        },
+        "component_name": "Contact",
+        "path": "contato"
+
+
+    },
+    {
+        "form": "teste_form",
+        "data": {
+            "initialValues": {
+                "nome": "",
+                "email": "",
+                "telefone": ""
+            }
+        },
+        "component_name": "TestForm",
+        "path": "teste"
     }
 ]

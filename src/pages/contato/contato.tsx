@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import EngineForm from '../../components/Form/EngineForm';
+import EngineForm from '../../components/EngineForm/EngineForm';
 import config from '../../config/config.json';
 
 const form = "contact_form";

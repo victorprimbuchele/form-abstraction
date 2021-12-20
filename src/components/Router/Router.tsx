@@ -1,12 +1,14 @@
-import react from 'react';
-import {Route, Routes} from 'react-router-dom';
-import Contact from '../../pages/Contact/Contact';
+import React, { lazy, Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { myConfigData } from '../../contexts/ConfigStore'
 
 const Router: React.FC = () => {
     return (
-        <Routes>
-            <Route path='/contact' element={<Contact />} />
-        </Routes>
+        <Suspense fallback={() => <div>Loading...</div>}>
+            <Routes>
+                <Route element={lazy(() => import(`./Contact`))} path="/" />
+            </Routes>
+        </Suspense>
     )
 }
 
